@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   text-decoration: none;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #0f8a9d;
+    
+    background: linear-gradient(57deg, #00c6a7, #1E4092);
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 2px 2px black;
+}
+.logo h1 span{
+    color: red;
+}
+.nav_list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+
+
+}
+.nav_list ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+}
+.nav_list ul li a::after{
+    content:'';
+    width: 0%;
+    height:2px;
+    margin: auto;
+    display: block;
+    background: red;
+    transition: 0.5s;
+}
+.nav_list ul li a:hover::after{
+    width: 100%;
+}
+.nav_list ul li a:hover{
+    color: black;
+}
+.contact{
+    margin-right: 25px;
+}
+.contact a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.contact a:hover{
+    border-radius: 8px;
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+
+/*-----------nav end-------*/
+
+
+.about{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;    
+}
+.about h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: rgb(224, 221, 13);
+}
+.about  p{
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+
+}
+.about button{
+    padding: 10px 35px;
+    color: red;
+    font-weight: 800;
+    font-size: 15px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+.about button:hover{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: 1s;
+}
+
+
+.courses{
+    width: 100%;
+    height: 100vh;
+    background:black;
+    padding: 20px;
+    background: linear-gradient(57deg, black, #1E4092);
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.offer{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.offer>h1{
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-shadow: 5px 5px 5px black;
+}
+.mech{
+    border: 2px solid red;
+    border-style: dotted;
+    padding-left: 10px;
+    border-radius: 10px;
+    height:200px;
+}
+.mech>h1{
+    text-align: center;
+    color: green;
+    text-shadow: 1px 1px 1px black;
+
+}
+.mech>p{
+    color: white;
+    margin-top: 5px;
+}
+.mech button{
+    padding: 5px 10px;
+    margin-top:30px;
+    border-radius: 8px;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow:2px 2px 2px red;
+
+}
+.mech button:hover{
+    background-color: black;
+    color: white;
+    box-shadow:2px 2px 2px white;
+    transition: 1s;
+
+}
+
+/***----------gallery*--------------*/
+
+.gallery{
+    width:100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(#bdc3c7, #734b6d);
+}
+.gallery>h1{
+        font-size: 40px;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+}
+.gallery>h1:hover{
+    color: white;
+    background-color: black;
+    transition: 1s;
+}
+.gallery>div{
+    width:600px;
+    height: 500px;
+    background-image: url("https://thumbs.dreamstime.com/b/college-students-books-smiling-to-camera-over-grey-wall-having-break-155809721.jpg");
+    background-size:100% 100%;
+    box-shadow: 5px 5px 5px black;
+    animation: changeImage 20s linear  infinite;
+}
+@keyframes changeImage {
+    0%{
+        background-image: url("https://thumbs.dreamstime.com/b/college-students-books-smiling-to-camera-over-grey-wall-having-break-155809721.jpg");
+    }
+    25%{
+        background-image: url("https://media.istockphoto.com/id/1340766096/photo/beautiful-smiling-female-college-student.jpg?b=1&s=170667a&w=0&k=20&c=uD2IggDQwHnwaXOzudlvaZ57QjCiUsQIIDoZ5Wrr6zA=");
+    }
+    50%{
+        background-image: url("https://media.istockphoto.com/id/1349297974/photo/multi-ethnic-group-of-latin-american-college-students-smiling.jpg?b=1&s=170667a&w=0&k=20&c=dkJyrGwyHIkHCWadKMBqsLD5pk-jHH6lpB2Ig23ba-E=");
+    }
+    75%{
+        background-image: url("https://w0.peakpx.com/wallpaper/664/921/HD-wallpaper-got-it-class-study-hall-notes-lecturer-college-students-lectur.jpg");
+    }
+    100%{
+        background-image: url("https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=");
+    }
+    
+}
+
+
+/***----------Footer*--------------*/
+
+.footer{
+    width:100%;
+    height:50vh;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    background-color: black;
+    padding: 20px;
+}
+.footer>div{
+    color: white;
+}
+.footer div h3{
+    color: khaki;
+    margin: 10px 0 50px 0;
+}
+.input{
+    padding: 0px 10px 0px 15px;
+}
+.btn{
+    margin-top: 15px;
+    padding:2px 62px 2px 62px;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color:red;
+    color: white;
+}
+
+
+/*-------icons----------*/
+
+.icons .social_links a{
+    padding: 10px;
+    color: white;
+}
